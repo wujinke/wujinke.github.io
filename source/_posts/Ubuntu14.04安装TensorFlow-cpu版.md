@@ -63,6 +63,10 @@ sudo apt install openssh-server
 sudo service ssh start
 %关闭防火墙
 sudo ufw disable
+%连接远程服务器的时候映射jupyter notebook的端口 （8008是本地机的端口。）
+ssh -L8008:localhost:8888 "用户名"@"远程主机地址"
+
+
 %有时候可能存在公钥缓存，使得连接失败，因此需要清除公钥
 ssh-keygen -R "你的远程服务器ip地址" 
 ```
