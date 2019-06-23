@@ -16,7 +16,7 @@
 <meta property="og:site_name" content="jinke的博客">
 <meta property="og:description" content="TensorFlow的安装首先安装python3的pip3工具，命令如下 1sudo apt-get install python3-pip python3-dev 安装完之后需要更新一下pip3 1sudo pip3 install --upgrade pip 然后安装 TensorFlow 1sudo pip3 install --upgrade tensorflow 在安装的过程可能遇到 不">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2019-06-13T07:37:58.197Z">
+<meta property="og:updated_time" content="2019-06-23T03:26:34.513Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Ubuntu14.04安装TensorFlow-cpu版">
 <meta name="twitter:description" content="TensorFlow的安装首先安装python3的pip3工具，命令如下 1sudo apt-get install python3-pip python3-dev 安装完之后需要更新一下pip3 1sudo pip3 install --upgrade pip 然后安装 TensorFlow 1sudo pip3 install --upgrade tensorflow 在安装的过程可能遇到 不">
@@ -194,7 +194,7 @@
 <p>为了使jupyter notebook 使用不同的虚拟环境</p>
 <figure class="highlight crmsh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">%为虚拟环境创建kernel</span><br><span class="line">pip3 install -n 环境名称 ipykernel</span><br><span class="line">python -m ipykernel install --<span class="keyword">user</span> <span class="title">--name</span> 环境名称 (--display-name <span class="string">"显示的名称"</span>)</span><br></pre></td></tr></table></figure>
 <h1 id="端口映射"><a href="#端口映射" class="headerlink" title="端口映射"></a>端口映射</h1><p>为了使jupyter notebook 可以被远程使用</p>
-<figure class="highlight routeros"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">sudo apt install openssh-server</span><br><span class="line">sudo<span class="built_in"> service </span>ssh start</span><br><span class="line">%关闭防火墙</span><br><span class="line">sudo ufw disable</span><br><span class="line">%有时候可能存在公钥缓存，使得连接失败，因此需要清除公钥</span><br><span class="line">ssh-keygen -R <span class="string">"你的远程服务器ip地址"</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight routeros"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">sudo apt install openssh-server</span><br><span class="line">sudo<span class="built_in"> service </span>ssh start</span><br><span class="line">%关闭防火墙</span><br><span class="line">sudo ufw disable</span><br><span class="line">%连接远程服务器的时候映射jupyter notebook的端口 （8008是本地机的端口。）</span><br><span class="line">ssh -L8008:localhost:8888 <span class="string">"用户名"</span>@<span class="string">"远程主机地址"</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">%有时候可能存在公钥缓存，使得连接失败，因此需要清除公钥</span><br><span class="line">ssh-keygen -R <span class="string">"你的远程服务器ip地址"</span></span><br></pre></td></tr></table></figure>
 
       
 
@@ -427,6 +427,10 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color2">卷积层可视化</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">记录</a>
               </li>
              
@@ -436,10 +440,6 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">codewars</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">卷积层可视化</a>
               </li>
              
               <li class="article-tag-list-item">
