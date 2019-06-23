@@ -178,15 +178,9 @@
     <div class="article-entry" itemprop="articleBody">
       
         <p>最近实验室换了新的电脑，想到我的blog还在原先的电脑上呢，不能就这样放弃了blog之旅，因此希望在之后换电脑的时候可以方便的实现hexo博客的搬运。因此写下这篇博客来备忘。</p>
-<p>首先，需要在自己的github上的blog的repository中创建一个hexo的分支，来存放hexo的一些配置文件。如下的是我的分支存放的</p>
-<p><img src="C:\Users\USER\AppData\Roaming\Typora\typora-user-images\1561285894092.png" alt="1561285894092"></p>
-<p>创建分支 </p>
-<figure class="highlight stylus"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">git remote add origin git@github<span class="selector-class">.com</span>:用户/用户<span class="selector-class">.github</span><span class="selector-class">.io</span><span class="selector-class">.git</span> #连接到远程的GitHub上</span><br><span class="line">git branch hexo #创建一个hexo的分支</span><br><span class="line">git remote add origin git@github<span class="selector-class">.com</span>:yourname/yourname<span class="selector-class">.github</span><span class="selector-class">.io</span><span class="selector-class">.git</span>  #将本地与Github项目对接</span><br><span class="line">git push origin hexo #push到github项目的hexo的分支上</span><br></pre></td></tr></table></figure>
-<p>并且设置hexo为默认分支，这样在之后的一些操作比较方便</p>
-<p>在别的电脑是执行如下操作</p>
-<figure class="highlight stylus"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">git remote add origin git@github<span class="selector-class">.com</span>:用户/用户<span class="selector-class">.github</span><span class="selector-class">.io</span><span class="selector-class">.git</span> #连接到远程的GitHub上</span><br><span class="line">git clone git@github<span class="selector-class">.com</span>:用户/用户<span class="selector-class">.github</span><span class="selector-class">.io</span><span class="selector-class">.git</span> #将远程的GitHub项目下载到本地</span><br><span class="line">进入clone的文件中</span><br><span class="line">npm install    #注意，这里一定要切换到刚刚clone的文件夹内执行，安装必要的所需组件，不用再init</span><br><span class="line">#生成新的笔记  可能用到 hexo clean 命令</span><br><span class="line">hexo new post <span class="string">"new blog name"</span>   #新建一个.md文件，并编辑完成自己的博客内容</span><br><span class="line">hexo g   </span><br><span class="line">hexo d </span><br><span class="line">#下面是将配置提交给GitHub</span><br><span class="line">git add .</span><br><span class="line">git commit -m hexo</span><br><span class="line">git push  <span class="comment">//更新分支</span></span><br></pre></td></tr></table></figure>
-<p>由上面步骤可以实现不同电脑之间的hexo同步</p>
-
+        
+          <a class="article-more-a" href="/2019/06/23/hexo的多台设备之间的同步/#more">more >></a>
+        
       
 
       
@@ -546,11 +540,11 @@
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">随笔</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">记录</a>
         		</li>
       		 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">记录</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">随笔</a>
         		</li>
       		
 		</ul>
@@ -699,10 +693,6 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">随笔</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">记录</a>
               </li>
              
@@ -712,6 +702,10 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">codewars</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">随笔</a>
               </li>
             
             <div class="clearfix"></div>
