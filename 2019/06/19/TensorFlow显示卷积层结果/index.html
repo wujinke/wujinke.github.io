@@ -16,12 +16,12 @@
 <meta property="og:site_name" content="jinke的博客">
 <meta property="og:description" content="最近在学习深度子空间聚类的代码，想看一下在深度学习过程中的每一层的卷积层的可视化结果是如何的，因此在网上各种搜索尝试，最终实现如下">
 <meta property="og:locale" content="default">
-<meta property="og:image" content="c:/Users/Administrator/AppData/Roaming/Typora/typora-user-images/1560932811760.png">
+<meta property="og:image" content="http://wujinke.github.io/.io//Users/Administrator/AppData/Roaming/Typora/typora-user-images/1560932811760.png">
 <meta property="og:updated_time" content="2019-06-19T08:29:09.402Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="TensorFlow显示卷积层结果">
 <meta name="twitter:description" content="最近在学习深度子空间聚类的代码，想看一下在深度学习过程中的每一层的卷积层的可视化结果是如何的，因此在网上各种搜索尝试，最终实现如下">
-<meta name="twitter:image" content="c:/Users/Administrator/AppData/Roaming/Typora/typora-user-images/1560932811760.png">
+<meta name="twitter:image" content="http://wujinke.github.io/.io//Users/Administrator/AppData/Roaming/Typora/typora-user-images/1560932811760.png">
   
     <link rel="alternative" href="/atom.xml" title="jinke的博客" type="application/atom+xml">
   
@@ -185,7 +185,7 @@
 <a id="more"></a>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">input_image = Img[<span class="number">11</span>:<span class="number">12</span>]  <span class="comment">#选择一幅图片</span></span><br><span class="line">W_conv1 = CAE.sess.run(CAE.encoder_layer[<span class="number">2</span>], feed_dict=&#123;CAE.x:input_image&#125;) <span class="comment">#得到input_image的第三层的卷积层</span></span><br><span class="line"><span class="comment">#W_conv1 = CAE.sess.run(tf.reshape(W_conv1, [3, 1, 8, 8]))</span></span><br><span class="line">W_conv1 = CAE.sess.run(tf.transpose(W_conv1, [<span class="number">3</span>, <span class="number">0</span>, <span class="number">2</span>, <span class="number">1</span>]))</span><br><span class="line"><span class="comment"># 为了显示方便对得到的卷积层进行rashape 卷积层的本身维度为 [1,8,8,3] [,row,col,channle]</span></span><br><span class="line">fig1,ax1 = plt.subplots(nrows=<span class="number">1</span>, ncols=<span class="number">6</span>, figsize = (<span class="number">6</span>,<span class="number">1</span>))</span><br><span class="line"><span class="keyword">for</span> i <span class="keyword">in</span> range(<span class="number">5</span>):</span><br><span class="line">    ax1[i].imshow(W_conv1[i][<span class="number">0</span>],cmap=<span class="string">'gray'</span>)</span><br><span class="line"><span class="comment">#input_image = CAE.sess.run(tf.reshape(input_image, [1, 1, 32, 32]))</span></span><br><span class="line">input_image = CAE.sess.run(tf.transpose(input_image, [<span class="number">3</span>, <span class="number">0</span>, <span class="number">2</span>, <span class="number">1</span>]))</span><br><span class="line">ax1[<span class="number">5</span>].imshow(input_image[<span class="number">0</span>][<span class="number">0</span>],cmap=<span class="string">'gray'</span>)<span class="comment">#为了显示灰度图片，加上cmap=‘gray’</span></span><br><span class="line">plt.title(<span class="string">'W_conv1 3×8×8'</span>)</span><br><span class="line">plt.show()</span><br></pre></td></tr></table></figure>
 <p>最终显示结果如下，可以看到在第三层的卷积层的时候，显示的是一种深层的语义特征</p>
-<p><img src="C:\Users\Administrator\AppData\Roaming\Typora\typora-user-images\1560932811760.png" alt="1560932811760"></p>
+<p><img src="/.io//Users\Administrator\AppData\Roaming\Typora\typora-user-images\1560932811760.png" alt="1560932811760"></p>
 <p>之后希望能够在使用FPN（特征金字塔）来对这些卷积层的特征进行处理！</p>
 
       
@@ -419,15 +419,15 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">虚拟环境</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">hexo</a>
               </li>
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">同步</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">随笔</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -443,7 +443,7 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">虚拟环境</a>
+                <a href="javascript:void(0)" class="js-tag color3">随笔</a>
               </li>
             
             <div class="clearfix"></div>
